@@ -10,9 +10,6 @@
 
 const topicsEntry = document.querySelector('.topics')
 
-
-
-
 function topicCreator(obj) {
 
     //TAB EL CREATED
@@ -25,17 +22,12 @@ function topicCreator(obj) {
 }
 
 
-
 axios.get("https://lambda-times-backend.herokuapp.com/topics")
 .then(response => {
 //   console.log(response.data.topics);
 response.data.topics.forEach(arg => {
-
-
-
 topicsEntry.append(topicCreator(arg));
-console.log(arg)
-
+// console.log(arg)
 
   })
 })
