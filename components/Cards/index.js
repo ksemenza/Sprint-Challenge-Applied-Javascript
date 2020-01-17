@@ -83,6 +83,7 @@ const js = response.data.articles.javascript
 const tech = response.data.articles.technology
 const jquery = response.data.articles.jquery
 const node = response.data.articles.node
+console.log(node)
 
 js.forEach(arg => {
     cardEntry.append(cardCreator(arg))
@@ -92,20 +93,19 @@ js.forEach(arg => {
       cardEntry.append(cardCreator(arg))
   })
 
-console.log(tech)
   jquery.forEach(arg => {
       cardEntry.append(cardCreator(arg))
   })
 
-console.log(tech)
+console.log(jquery)
 
-})
   node.forEach(arg => {
       cardEntry.append(cardCreator(arg))
   })
 
+console.log(node)
 
-
+})
 .catch( error => {
   console.log("data return topic", error)
 })
