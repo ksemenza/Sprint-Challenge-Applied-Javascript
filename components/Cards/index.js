@@ -23,17 +23,12 @@ let body = document.querySelector('body')
 
 axios.get("https://lambda-times-backend.herokuapp.com/articles")
 .then(response => {
-  console.log(response.data.articles);
-  response.data.articles.forEach(item => {
-    const newCard = cardCreator(item);
-    cardCta.append(newCard);
-  })
+//   console.log(response.data.articles);
+
 })
 .catch( error => {
   console.log("data return card", error)
 })
-
-
 
 
 function cardCreator() {

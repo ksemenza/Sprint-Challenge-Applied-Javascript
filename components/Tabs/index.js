@@ -10,19 +10,35 @@
 
 const topicsEntry = document.querySelector('.topics')
 
+
+
+
+function topicCreator(obj) {
+
+    //TAB EL CREATED
+    const topicTab = document.createElement('div')
+    //CLASS NAME
+    topicTab.className = ('tab')
+    topicTab.textContent = obj
+    topicsEntry.append(topicTab)
+    return topicTab
+}
+
+
+
 axios.get("https://lambda-times-backend.herokuapp.com/topics")
 .then(response => {
-  console.log(response.data.topics);
-    response.data.topics.forEach(arg => {
-    const newTopic = topicCreator(arg);
-    topicsEntry.append(newTopic);
+//   console.log(response.data.topics);
+response.data.topics.forEach(arg => {
+
+
+
+topicsEntry.append(topicCreator(arg));
+console.log(arg)
+
+
   })
 })
 .catch( error => {
   console.log("data return topic", error)
 })
-
-
-function topicCreator() {
-    
-}
