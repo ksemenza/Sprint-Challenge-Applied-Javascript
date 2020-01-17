@@ -76,19 +76,36 @@ function cardCreator(obj) {
 
 axios.get("https://lambda-times-backend.herokuapp.com/articles")
 .then(response => {
-//   console.log(response);
+  console.log(response);
 
   
-const js = response.data.articles.javascript,
-tech = response.data.articles.tech,
-jquery = response.data.articles.jquery,
-node = response.data.articles.node;
+const js = response.data.articles.javascript
+const tech = response.data.articles.technology
+const jquery = response.data.articles.jquery
+const node = response.data.articles.node
 
 js.forEach(arg => {
     cardEntry.append(cardCreator(arg))
   })
 
+  tech.forEach(arg => {
+      cardEntry.append(cardCreator(arg))
+  })
+
+console.log(tech)
+  jquery.forEach(arg => {
+      cardEntry.append(cardCreator(arg))
+  })
+
+console.log(tech)
+
 })
+  node.forEach(arg => {
+      cardEntry.append(cardCreator(arg))
+  })
+
+
+
 .catch( error => {
   console.log("data return topic", error)
 })
