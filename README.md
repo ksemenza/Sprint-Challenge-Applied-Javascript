@@ -29,15 +29,20 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. What is the DOM?
+It is a branched system that is composed of the vast array of items that renders the view and actions in the console window
 
 2. What is an event?
+Action that occurs and is a result of users action or state change regarding the DOM
 
 3. What is an event listener?
+A funciton that waits for 'events' to occur
 
 4. Why would we convert a NodeList into an Array?
+Is an abstract collection of elements in that can iterator over data to update DOM continuously
+Is an abstract collection of elements in that can iterator over data to update DOM continuously
 
 5. What is a component?
-
+a piece of code that acts upon the dom and is controlled by outside data
 ### Git Set up
 
 * [ ] Fork the project into your GitHub user account
